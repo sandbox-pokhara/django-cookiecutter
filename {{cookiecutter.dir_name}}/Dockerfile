@@ -7,6 +7,7 @@ COPY pyproject.toml .
 COPY uv.lock .
 RUN uv sync --no-cache-dir --frozen
 COPY ./backend/manage.py .
+COPY ./backend/env.py .
 COPY ./backend/project project
 COPY ./backend/core core
 EXPOSE 8000
